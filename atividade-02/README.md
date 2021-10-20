@@ -2,7 +2,7 @@
 
 > Os exercícios foram organizados da seguinte forma: `{nome-seção}/{nome-exercício}`
 
-Atividades de CSS do site [w3schools]('https://www.w3schools.com/css/exercise.asp?filename=exercise_selectors1') relacionadas aos seguintes tópicos:
+Atividades de CSS do site [w3schools](https://www.w3schools.com/css/exercise.asp?filename=exercise_selectors1) relacionadas aos seguintes tópicos:
 
 1. CSS SELECTORS
 2. CSS HOW TO...
