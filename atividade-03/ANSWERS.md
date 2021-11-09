@@ -1,6 +1,6 @@
 # Atividade JavaScript Básico - Respostas 
 
-**OBS.:** Respostas organizadas pelo nome da seção e nome da atividade do site [w3schools]('https://www.w3schools.com/js/exercise_js.asp')
+**OBS.:** Respostas organizadas pelo nome da seção e nome da atividade do site [w3schools](https://www.w3schools.com/js/exercise_js.asp)
 
 ## 1 - JS Variables
 ### Exercise 1
