@@ -5,11 +5,11 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Free Web tutorials">
-  <meta name="keywords" content="HTML,CSS,JavaScript">
+  <meta name="description" content="Memory Game based on Toy Story 3">
+  <meta name="keywords" content="HTML,CSS,JavaScript,Memory Game">
   <meta name="author" content="Alexandre Silva">
   <link rel="stylesheet" href="css/style.css">
-  <title>Jogo da Memoria</title>
+  <title>Memory Story 3</title>
 </head>
 
 <body>
@@ -18,56 +18,328 @@
       <ul class="nav">
         <li id="profile-nav">
           <img src="img/img_avatar.png" alt="Avatar" class="avatar">
-          <span>Nome do Jogador</span>
+          <span>Jogador 1</span>
         </li>
         <li id="game-nav">
-          <h2>Jogo da Memoria</h2>
-          Quantidade de Turnos e Tempo
+          <h2>Memory Story 3</h2>
+          <!-- Quantidade de Turnos e Tempo -->
         </li>
         <li id="config-nav">
-          <a data-ico="🔧"></a>
+          <!-- <a data-ico="🔧"></a> -->
         </li>
       </ul>
     </header>
     <article class="main">
       <table id="game-area">
         <tr>
-          <td><img class="front-face" src="img/1.jpg" alt=""></td>
-          <td><img class="front-face" src="img/1.jpg" alt=""></td>
-          <td><img class="front-face" src="img/3.jpg" alt=""></td>
-          <td><img class="front-face" src="img/3.jpg" alt=""></td>
-          <td><img class="front-face" src="img/5.jpg" alt=""></td>
-          <td><img class="front-face" src="img/5.jpg" alt=""></td>
+          <td>
+            <div class="flip-card back-card unsorted">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img class="front-face" src="img/1.jpg" alt="">
+                </div>
+                <div class="flip-card-back">
+                  <img class="back-face" src="img/frente.jpg" alt="">
+                </div>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="flip-card back-card unsorted">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img class="front-face" src="img/1.jpg" alt="">
+                </div>
+                <div class="flip-card-back">
+                  <img class="back-face" src="img/frente.jpg" alt="">
+                </div>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="flip-card back-card unsorted">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img class="front-face" src="img/3.jpg" alt="">
+                </div>
+                <div class="flip-card-back">
+                  <img class="back-face" src="img/frente.jpg" alt="">
+                </div>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="flip-card back-card unsorted">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img class="front-face" src="img/3.jpg" alt="">
+                </div>
+                <div class="flip-card-back">
+                  <img class="back-face" src="img/frente.jpg" alt="">
+                </div>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="flip-card back-card unsorted">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img class="front-face" src="img/5.jpg" alt="">
+                </div>
+                <div class="flip-card-back">
+                  <img class="back-face" src="img/frente.jpg" alt="">
+                </div>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="flip-card back-card unsorted">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img class="front-face" src="img/5.jpg" alt="">
+                </div>
+                <div class="flip-card-back">
+                  <img class="back-face" src="img/frente.jpg" alt="">
+                </div>
+              </div>
+            </div>
+          </td>
         </tr>
         <tr>
-          <td><img class="front-face" src="img/7.jpg" alt=""></td>
-          <td><img class="front-face" src="img/7.jpg" alt=""></td>
-          <td><img class="front-face" src="img/9.jpg" alt=""></td>
-          <td><img class="front-face" src="img/9.jpg" alt=""></td>
-          <td><img class="front-face" src="img/11.jpg" alt=""></td>
-          <td><img class="front-face" src="img/11.jpg" alt=""></td>
+          <td>
+            <div class="flip-card back-card unsorted">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img class="front-face" src="img/7.jpg" alt="">
+                </div>
+                <div class="flip-card-back">
+                  <img class="back-face" src="img/frente.jpg" alt="">
+                </div>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="flip-card back-card unsorted">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img class="front-face" src="img/7.jpg" alt="">
+                </div>
+                <div class="flip-card-back">
+                  <img class="back-face" src="img/frente.jpg" alt="">
+                </div>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="flip-card back-card unsorted">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img class="front-face" src="img/9.jpg" alt="">
+                </div>
+                <div class="flip-card-back">
+                  <img class="back-face" src="img/frente.jpg" alt="">
+                </div>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="flip-card back-card unsorted">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img class="front-face" src="img/9.jpg" alt="">
+                </div>
+                <div class="flip-card-back">
+                  <img class="back-face" src="img/frente.jpg" alt="">
+                </div>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="flip-card back-card unsorted">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img class="front-face" src="img/11.jpg" alt="">
+                </div>
+                <div class="flip-card-back">
+                  <img class="back-face" src="img/frente.jpg" alt="">
+                </div>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="flip-card back-card unsorted">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img class="front-face" src="img/11.jpg" alt="">
+                </div>
+                <div class="flip-card-back">
+                  <img class="back-face" src="img/frente.jpg" alt="">
+                </div>
+              </div>
+            </div>
+          </td>
         </tr>
         <tr>
-          <td><img class="front-face" src="img/13.jpg" alt=""></td>
-          <td><img class="front-face" src="img/13.jpg" alt=""></td>
-          <td><img class="front-face" src="img/15.jpg" alt=""></td>
-          <td><img class="front-face" src="img/15.jpg" alt=""></td>
-          <td><img class="front-face" src="img/17.jpg" alt=""></td>
-          <td><img class="front-face" src="img/17.jpg" alt=""></td>
+          <td>
+            <div class="flip-card back-card unsorted">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img class="front-face" src="img/13.jpg" alt="">
+                </div>
+                <div class="flip-card-back">
+                  <img class="back-face" src="img/frente.jpg" alt="">
+                </div>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="flip-card back-card unsorted">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img class="front-face" src="img/13.jpg" alt="">
+                </div>
+                <div class="flip-card-back">
+                  <img class="back-face" src="img/frente.jpg" alt="">
+                </div>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="flip-card back-card unsorted">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img class="front-face" src="img/15.jpg" alt="">
+                </div>
+                <div class="flip-card-back">
+                  <img class="back-face" src="img/frente.jpg" alt="">
+                </div>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="flip-card back-card unsorted">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img class="front-face" src="img/15.jpg" alt="">
+                </div>
+                <div class="flip-card-back">
+                  <img class="back-face" src="img/frente.jpg" alt="">
+                </div>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="flip-card back-card unsorted">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img class="front-face" src="img/17.jpg" alt="">
+                </div>
+                <div class="flip-card-back">
+                  <img class="back-face" src="img/frente.jpg" alt="">
+                </div>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="flip-card back-card unsorted">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img class="front-face" src="img/17.jpg" alt="">
+                </div>
+                <div class="flip-card-back">
+                  <img class="back-face" src="img/frente.jpg" alt="">
+                </div>
+              </div>
+            </div>
+          </td>
         </tr>
         <tr>
-          <td><img class="front-face" src="img/19.jpg" alt=""></td>
-          <td><img class="front-face" src="img/19.jpg" alt=""></td>
-          <td><img class="front-face" src="img/21.jpg" alt=""></td>
-          <td><img class="front-face" src="img/21.jpg" alt=""></td>
-          <td><img class="front-face" src="img/23.jpg" alt=""></td>
-          <td><img class="front-face" src="img/23.jpg" alt=""></td>
+          <td>
+            <div class="flip-card back-card unsorted">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img class="front-face" src="img/19.jpg" alt="">
+                </div>
+                <div class="flip-card-back">
+                  <img class="back-face" src="img/frente.jpg" alt="">
+                </div>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="flip-card back-card unsorted">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img class="front-face" src="img/19.jpg" alt="">
+                </div>
+                <div class="flip-card-back">
+                  <img class="back-face" src="img/frente.jpg" alt="">
+                </div>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="flip-card back-card unsorted">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img class="front-face" src="img/21.jpg" alt="">
+                </div>
+                <div class="flip-card-back">
+                  <img class="back-face" src="img/frente.jpg" alt="">
+                </div>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="flip-card back-card unsorted">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img class="front-face" src="img/21.jpg" alt="">
+                </div>
+                <div class="flip-card-back">
+                  <img class="back-face" src="img/frente.jpg" alt="">
+                </div>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="flip-card back-card unsorted">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img class="front-face" src="img/23.jpg" alt="">
+                </div>
+                <div class="flip-card-back">
+                  <img class="back-face" src="img/frente.jpg" alt="">
+                </div>
+              </div>
+            </div>
+          </td>
+          <td>
+            <div class="flip-card back-card unsorted">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img class="front-face" src="img/23.jpg" alt="">
+                </div>
+                <div class="flip-card-back">
+                  <img class="back-face" src="img/frente.jpg" alt="">
+                </div>
+              </div>
+            </div>
+          </td>
         </tr>
       </table>
-      <button onclick="shuffleCards()">Sortear</button>
+      <hr style="margin-top: 10px;margin-bottom: 25px;">
+      <button id="sort-btn">Sortear</button>
     </article>
-    <aside class="aside aside-1">Pontuações</aside>
-    <footer class="footer">©</footer>
+    <aside class="aside aside-offset" style="width: 10px;">
+    </aside>
+    <aside class="aside aside-1">
+      <p style="text-align: center;">Mensagens</p>
+      <div id="msg-game"></div>
+    </aside>
+    <footer class="footer">
+      Alexandre Silva 2021 ©
+    </footer>
   </div>
   <script src="js/game.js"></script>
 </body>
