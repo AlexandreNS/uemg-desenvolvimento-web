@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Free Web tutorials">
+  <meta name="keywords" content="HTML,CSS,JavaScript">
+  <meta name="author" content="Alexandre Silva">
+  <link rel="stylesheet" href="css/style.css">
+  <title>Jogo da Memoria</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <header class="header">
+      <ul class="nav">
+        <li id="profile-nav">
+          <img src="img/img_avatar.png" alt="Avatar" class="avatar">
+          <span>Nome do Jogador</span>
+        </li>
+        <li id="game-nav">
+          <h2>Jogo da Memoria</h2>
+          Quantidade de Turnos e Tempo
+        </li>
+        <li id="config-nav">
+          <a data-ico="🔧"></a>
+        </li>
+      </ul>
+    </header>
+    <article class="main">
+      <table id="game-area">
+        <tr>
+          <td><img class="front-face" src="img/1.jpg" alt=""></td>
+          <td><img class="front-face" src="img/1.jpg" alt=""></td>
+          <td><img class="front-face" src="img/3.jpg" alt=""></td>
+          <td><img class="front-face" src="img/3.jpg" alt=""></td>
+          <td><img class="front-face" src="img/5.jpg" alt=""></td>
+          <td><img class="front-face" src="img/5.jpg" alt=""></td>
+        </tr>
+        <tr>
+          <td><img class="front-face" src="img/7.jpg" alt=""></td>
+          <td><img class="front-face" src="img/7.jpg" alt=""></td>
+          <td><img class="front-face" src="img/9.jpg" alt=""></td>
+          <td><img class="front-face" src="img/9.jpg" alt=""></td>
+          <td><img class="front-face" src="img/11.jpg" alt=""></td>
+          <td><img class="front-face" src="img/11.jpg" alt=""></td>
+        </tr>
+        <tr>
+          <td><img class="front-face" src="img/13.jpg" alt=""></td>
+          <td><img class="front-face" src="img/13.jpg" alt=""></td>
+          <td><img class="front-face" src="img/15.jpg" alt=""></td>
+          <td><img class="front-face" src="img/15.jpg" alt=""></td>
+          <td><img class="front-face" src="img/17.jpg" alt=""></td>
+          <td><img class="front-face" src="img/17.jpg" alt=""></td>
+        </tr>
+        <tr>
+          <td><img class="front-face" src="img/19.jpg" alt=""></td>
+          <td><img class="front-face" src="img/19.jpg" alt=""></td>
+          <td><img class="front-face" src="img/21.jpg" alt=""></td>
+          <td><img class="front-face" src="img/21.jpg" alt=""></td>
+          <td><img class="front-face" src="img/23.jpg" alt=""></td>
+          <td><img class="front-face" src="img/23.jpg" alt=""></td>
+        </tr>
+      </table>
+      <button onclick="shuffleCards()">Sortear</button>
+    </article>
+    <aside class="aside aside-1">Pontuações</aside>
+    <footer class="footer">©</footer>
+  </div>
+  <script src="js/game.js"></script>
+</body>
+
+</html>

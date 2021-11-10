@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;1,100;1,200&display=swap');
+
+body {
+  font-family: Raleway, sans-serif;
+  margin: 0;
+  font-size: 1.5em;
+  text-align: center;
+  background: #1b1523;
+  color: #fff;
+}
+
+button {
+  background: none;
+  border: 1px solid #fff;
+  padding: 6px 12px;
+  border-radius: 4px;
+  color: #fff;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+button:hover {
+  background-color: #6638c2;
+}
+
+.nav {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+}
+
+.nav > * {
+  flex: 1;
+}
+
+#profile-nav {
+  text-align: left;
+  margin-right: auto;
+  display: inline-block;
+}
+
+#profile-nav img {
+  vertical-align: middle;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+
+#profile-nav span {
+  font-size: 0.8em;
+  padding-left: 10px;
+}
+
+#config-nav {
+  text-align: right;
+  margin-left: auto;
+}
+
+#config-nav a {
+  color: #fff;
+  text-decoration: none;
+  text-align: center;
+  font-size: 1.5em;
+  cursor: pointer;
+  transition: font-size .5s;
+}
+
+#config-nav a:hover {
+  font-size: 1.7em;
+}  
+
+#config-nav a::before{
+  grid-area: 1/ 1;
+  content: attr(data-ico);
+}
+
+#game-area{
+  border-spacing: 0px;
+}
+
+#game-area img{
+  width: 130px;
+  margin: 8px;
+}
+
+.wrapper {
+  display: flex;
+  flex-flow: row wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.wrapper > * {
+  flex: 1 100%;
+}
+
+/* Medium screens */
+@media all and (min-width: 600px) {
+  /* We tell both sidebars to share a row */
+  .aside { flex: 1 auto; }
+}
+
+/* Large screens */
+@media all and (min-width: 1200px) {
+  .main { flex: 5 0px; }
+  .main    { order: 1; }
+  .aside-1 { order: 2; }
+  .footer  { order: 3; }
+}
