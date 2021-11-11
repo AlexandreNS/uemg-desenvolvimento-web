@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Alexandre Silva">
+  <title>Lampada</title>
+  <style>
+    .container {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #lamp-img {
+      width: 169px;
+      height: 220px;
+    }
+
+    body {
+      margin: 0px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <img id="lamp-img" src="images/apagada.jpg" data-info="off">
+  </div>
+
+  <script>
+    document.getElementById('lamp-img').addEventListener('click', handleLamp)
+
+    const lampImgs = {
+      off: 'images/apagada.jpg',
+      on: 'images/acesa.jpg',
+      broken: 'images/quebrada.jpg',
+    }
+
+    function handleLamp(ev) {
+      if (this.dataset.info === 'off') {
+        this.dataset.info = 'on'
+      } else if (this.dataset.info === 'on') {
+        this.dataset.info = 'broken'
+      } else {
+        this.dataset.info = 'off'
+      }
+
+      this.src = lampImgs[this.dataset.info]
+    }
+  </script>
+</body>
+
+</html>
