@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Alexandre Silva">
+  <title>Numero 01</title>
+</head>
+
+<body>
+  <form name="cadastro">
+
+    <input type="text" value="Prova PPI" name="txtCurso" size="40">
+    <input type="button" value="Ativar" name="btnOk" onclick="alterar()">
+  </form>
+
+  <script>
+    function alterar() {
+      document.querySelector("input[name=txtCurso]").value = "Tirei total"
+    }
+  </script>
+</body>
+
+</html>

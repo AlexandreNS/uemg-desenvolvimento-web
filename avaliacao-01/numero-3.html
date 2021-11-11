@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Alexandre Silva">
+  <title>Numero 03</title>
+</head>
+
+<body>
+  <script>
+    const validColors = {
+      "azul": {
+        bgColor: "#0000FF",
+        colorText: "#FFF"
+      },
+      "verde": {
+        bgColor: "#00FF00",
+        colorText: "#000"
+      },
+      "vermelho": {
+        bgColor: "#FF0000",
+        colorText: "#FFF"
+      }
+    }
+    let colorUser = prompt("Informe uma cor: (Azul, Verde ou Vermelho)")
+    colorUser = colorUser?.toLowerCase()
+
+    while (!Object.keys(validColors).includes(colorUser) && colorUser) {
+      colorUser = prompt("Cor não disponível\nInforme uma cor valida: (Azul, Verde ou Vermelho)")
+      colorUser = colorUser?.toLowerCase()
+      if (!colorUser) break
+    }
+
+    const h1Tag = document.createElement('h1')
+    const textNode = document.createTextNode(colorUser ? "Bem Vindo a Prova de PPI" : "Era necessário digitar uma cor valida :(")
+
+    h1Tag.appendChild(textNode)
+    document.body.appendChild(h1Tag)
+    document.body.style.backgroundColor = colorUser ? validColors[colorUser].bgColor : 'none'
+    document.body.style.color = colorUser ? validColors[colorUser].colorText : 'none'
+
+  </script>
+</body>
+
+</html>

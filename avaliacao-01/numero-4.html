@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Alexandre Silva">
+  <title>Numero 04</title>
+  <style>
+    h6 {
+      text-align: center;
+    }
+
+    .hide {
+      display: none;
+    }
+
+    #fixed-tv {
+      position: fixed;
+      right: 0;
+      bottom: 0;
+    }
+  </style>
+</head>
+
+<body>
+  <table>
+    <tr>
+      <td><img src="images/cafe.jpg" alt="cafe"></td>
+      <td><img src="images/cracha.jpg" alt="cracha"></td>
+    </tr>
+    <tr>
+      <td><img src="images/lista.jpg" alt="lista"></td>
+      <td><img src="images/mala.jpg" alt="mala"></td>
+    </tr>
+    <tr>
+      <td><img src="images/oculos.jpg" alt="oculos"></td>
+      <td><img src="images/tv.jpg" alt="tv"></td>
+    </tr>
+  </table>
+
+  <div id="fixed-tv" class="hide"><img src="images/tv.jpg" alt="tv"></div>
+
+  <script>
+    const actions = {
+      clickedOculos: 0,
+      cafe(ev) {
+        ev.target.style.display = 'none'
+      },
+      cracha(ev) {
+        ev.target.src = "images/cafe.jpg"
+      },
+      lista(ev) {
+        const nameImage = ev.target.src?.split('/')?.pop()
+        const parentElement = ev.target.parentElement
+
+        parentElement.removeChild(ev.target)
+
+        const h6Tag = document.createElement('h6')
+        const textNode = document.createTextNode(nameImage)
+        h6Tag.appendChild(textNode)
+
+        parentElement.appendChild(h6Tag)
+
+      },
+      mala() {
+        alert('Clicou na mala!')
+      },
+      oculos(ev) {
+        this.clickedOculos++
+        document.body.style.backgroundColor = this.clickedOculos % 2 ? 'red' : 'white'
+      },
+      tv(ev) {
+        document.getElementById("fixed-tv").className = ''
+        ev.target.style.display = 'none'
+      }
+    }
+
+    function handleClickImage(ev) {
+      actions[ev.target.alt](ev)
+    }
+
+    Array.from(document.querySelectorAll('table tr td img')).forEach((el) => el.addEventListener('click', handleClickImage))
+  </script>
+</body>
+
+</html>
