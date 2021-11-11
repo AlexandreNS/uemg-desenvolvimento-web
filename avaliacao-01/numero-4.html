@@ -55,7 +55,7 @@
         const nameImage = ev.target.src?.split('/')?.pop()
         const parentElement = ev.target.parentElement
 
-        parentElement.removeChild(ev.target)
+        ev.target.style.display = 'none'
 
         const h6Tag = document.createElement('h6')
         const textNode = document.createTextNode(nameImage)
