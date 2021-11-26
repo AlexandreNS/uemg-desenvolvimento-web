@@ -4,7 +4,7 @@
 
 A conexão do banco é realizada pelo `services/database.js` utilizando uma parametrizações vindas de um arquivo `.env`. É possível criar baseado no `.env.example`.
 
-A partir de informações da tabela Employees localizadas em `schemas/employees.js` o `routes/employees` realiza as operações de consulta (limit, ordering e select de campos) e validação das requisições.
+A partir de informações da tabela Employees localizadas em `schemas/employees.js` o `routes/employees.js` realiza as operações de consulta (limit, ordering e select de campos) e validação das requisições.
 
 ## Execução
 
