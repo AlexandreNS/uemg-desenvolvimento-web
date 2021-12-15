@@ -1,10 +1,10 @@
-# Atividade 05
+# Atividade 06
 
-> A documentação da API criada nessa atividade pode ser conferida aqui [Northwind-API v1](https://documenter.getpostman.com/view/12463861/UVJbGcSB).
+> A documentação da API criada nessa atividade pode ser conferida aqui [Northwind-API v2](https://documenter.getpostman.com/view/12463861/UVR7MopM).
 
 A conexão do banco é realizada pelo `services/database.js` utilizando uma parametrizações vindas de um arquivo `.env`. É possível criar baseado no `.env.example`.
 
-A partir de informações da tabela Employees localizadas em `schemas/employees.js` o `routes/employees.js` realiza as operações de consulta (limit, ordering e select de campos) e validação das requisições.
+A partir de informações das tabelas Categories, Region e Employees localizadas na pasta de `schemas` é registrado pela função `routerModelBuilder(schema, limitDefault = 20)`, incluída no arquivo `helpers/route.js`, operações de CRUD de acordo com as validações e informações passados para cada schema
 
 ## Execução
 
