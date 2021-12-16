@@ -44,7 +44,7 @@ const router = routerModelBuilder(
   }
 )
 
-router.post('/realizalogin', (req, res, next) => {
+router.post('/realizarlogin', (req, res, next) => {
   try {
     const { value: item, error } = Joi.object().keys(
       {

@@ -8,7 +8,7 @@ A partir de informações da tabela `login` localizadas na pasta de `schemas` é
 
 Para impedir a criação ou atualização de usuários de mesmo login foi passado o `sameUserMiddleware` para as rotas de insert e update do builder de rotas.
 
-Por fim foi configurado a rota `usuarios/realizalogin` que somente faz a checagem do login e senha.
+Por fim foi configurado a rota `usuarios/realizarlogin` que somente faz a checagem do login e senha.
 
 ## Execução
 
