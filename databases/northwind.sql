@@ -1,4 +1,4 @@
-CREATE DATABASE  IF NOT EXISTS `northwind` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+CREATE DATABASE  IF NOT EXISTS `northwind` /*!40100 DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
 USE `northwind`;
 -- MySQL dump 10.13  Distrib 8.0.27, for Win64 (x86_64)
 --
@@ -24,7 +24,7 @@ USE `northwind`;
 DROP TABLE IF EXISTS `alphabetical list of products`;
 /*!50001 DROP VIEW IF EXISTS `alphabetical list of products`*/;
 SET @saved_cs_client     = @@character_set_client;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!50503 SET character_set_client = utf8 */;
 /*!50001 CREATE VIEW `alphabetical list of products` AS SELECT 
  1 AS `ProductID`,
  1 AS `ProductName`,
@@ -45,7 +45,7 @@ SET character_set_client = @saved_cs_client;
 
 DROP TABLE IF EXISTS `categories`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!50503 SET character_set_client = utf8 */;
 CREATE TABLE `categories` (
   `CategoryID` int NOT NULL AUTO_INCREMENT,
   `CategoryName` varchar(15) NOT NULL,
@@ -53,7 +53,7 @@ CREATE TABLE `categories` (
   `Picture` longblob,
   PRIMARY KEY (`CategoryID`),
   KEY `CategoryName` (`CategoryName`)
-) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -73,7 +73,7 @@ UNLOCK TABLES;
 DROP TABLE IF EXISTS `category sales for 1997`;
 /*!50001 DROP VIEW IF EXISTS `category sales for 1997`*/;
 SET @saved_cs_client     = @@character_set_client;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!50503 SET character_set_client = utf8 */;
 /*!50001 CREATE VIEW `category sales for 1997` AS SELECT 
  1 AS `CategoryName`,
  1 AS `CategorySales`*/;
@@ -86,7 +86,7 @@ SET character_set_client = @saved_cs_client;
 DROP TABLE IF EXISTS `current product list`;
 /*!50001 DROP VIEW IF EXISTS `current product list`*/;
 SET @saved_cs_client     = @@character_set_client;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!50503 SET character_set_client = utf8 */;
 /*!50001 CREATE VIEW `current product list` AS SELECT 
  1 AS `ProductID`,
  1 AS `ProductName`*/;
@@ -99,7 +99,7 @@ SET character_set_client = @saved_cs_client;
 DROP TABLE IF EXISTS `customer and suppliers by city`;
 /*!50001 DROP VIEW IF EXISTS `customer and suppliers by city`*/;
 SET @saved_cs_client     = @@character_set_client;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!50503 SET character_set_client = utf8 */;
 /*!50001 CREATE VIEW `customer and suppliers by city` AS SELECT 
  1 AS `City`,
  1 AS `CompanyName`,
@@ -113,7 +113,7 @@ SET character_set_client = @saved_cs_client;
 
 DROP TABLE IF EXISTS `customercustomerdemo`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!50503 SET character_set_client = utf8 */;
 CREATE TABLE `customercustomerdemo` (
   `CustomerID` varchar(5) NOT NULL,
   `CustomerTypeID` varchar(10) NOT NULL,
@@ -121,7 +121,7 @@ CREATE TABLE `customercustomerdemo` (
   KEY `FK_CustomerCustomerDemo` (`CustomerTypeID`),
   CONSTRAINT `FK_CustomerCustomerDemo` FOREIGN KEY (`CustomerTypeID`) REFERENCES `customerdemographics` (`CustomerTypeID`),
   CONSTRAINT `FK_CustomerCustomerDemo_Customers` FOREIGN KEY (`CustomerID`) REFERENCES `customers` (`CustomerID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -139,12 +139,12 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `customerdemographics`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!50503 SET character_set_client = utf8 */;
 CREATE TABLE `customerdemographics` (
   `CustomerTypeID` varchar(10) NOT NULL,
   `CustomerDesc` mediumtext,
   PRIMARY KEY (`CustomerTypeID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -162,7 +162,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `customers`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!50503 SET character_set_client = utf8 */;
 CREATE TABLE `customers` (
   `CustomerID` varchar(5) NOT NULL,
   `CompanyName` varchar(40) NOT NULL,
@@ -180,7 +180,7 @@ CREATE TABLE `customers` (
   KEY `CompanyName` (`CompanyName`),
   KEY `PostalCode` (`PostalCode`),
   KEY `Region` (`Region`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -199,7 +199,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `employees`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!50503 SET character_set_client = utf8 */;
 CREATE TABLE `employees` (
   `EmployeeID` int NOT NULL AUTO_INCREMENT,
   `LastName` varchar(20) NOT NULL,
@@ -225,7 +225,7 @@ CREATE TABLE `employees` (
   KEY `PostalCode` (`PostalCode`),
   KEY `FK_Employees_Employees` (`ReportsTo`),
   CONSTRAINT `FK_Employees_Employees` FOREIGN KEY (`ReportsTo`) REFERENCES `employees` (`EmployeeID`)
-) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=18 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -244,7 +244,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `employeeterritories`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!50503 SET character_set_client = utf8 */;
 CREATE TABLE `employeeterritories` (
   `EmployeeID` int NOT NULL,
   `TerritoryID` varchar(20) NOT NULL,
@@ -252,7 +252,7 @@ CREATE TABLE `employeeterritories` (
   KEY `FK_EmployeeTerritories_Territories` (`TerritoryID`),
   CONSTRAINT `FK_EmployeeTerritories_Employees` FOREIGN KEY (`EmployeeID`) REFERENCES `employees` (`EmployeeID`),
   CONSTRAINT `FK_EmployeeTerritories_Territories` FOREIGN KEY (`TerritoryID`) REFERENCES `territories` (`TerritoryID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -272,7 +272,7 @@ UNLOCK TABLES;
 DROP TABLE IF EXISTS `invoices`;
 /*!50001 DROP VIEW IF EXISTS `invoices`*/;
 SET @saved_cs_client     = @@character_set_client;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!50503 SET character_set_client = utf8 */;
 /*!50001 CREATE VIEW `invoices` AS SELECT 
  1 AS `ShipName`,
  1 AS `ShipAddress`,
@@ -308,7 +308,7 @@ SET character_set_client = @saved_cs_client;
 
 DROP TABLE IF EXISTS `login`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!50503 SET character_set_client = utf8 */;
 CREATE TABLE `login` (
   `idlogin` int NOT NULL AUTO_INCREMENT,
   `login` varchar(45) NOT NULL,
@@ -316,7 +316,7 @@ CREATE TABLE `login` (
   `nome` varchar(45) DEFAULT NULL,
   `sobrenome` varchar(45) DEFAULT NULL,
   PRIMARY KEY (`idlogin`)
-) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=21 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -335,7 +335,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `order details`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!50503 SET character_set_client = utf8 */;
 CREATE TABLE `order details` (
   `OrderID` int NOT NULL,
   `ProductID` int NOT NULL,
@@ -346,7 +346,7 @@ CREATE TABLE `order details` (
   KEY `FK_Order_Details_Products` (`ProductID`),
   CONSTRAINT `FK_Order_Details_Orders` FOREIGN KEY (`OrderID`) REFERENCES `orders` (`OrderID`),
   CONSTRAINT `FK_Order_Details_Products` FOREIGN KEY (`ProductID`) REFERENCES `products` (`ProductID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -366,7 +366,7 @@ UNLOCK TABLES;
 DROP TABLE IF EXISTS `order details extended`;
 /*!50001 DROP VIEW IF EXISTS `order details extended`*/;
 SET @saved_cs_client     = @@character_set_client;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!50503 SET character_set_client = utf8 */;
 /*!50001 CREATE VIEW `order details extended` AS SELECT 
  1 AS `OrderID`,
  1 AS `ProductID`,
@@ -384,7 +384,7 @@ SET character_set_client = @saved_cs_client;
 DROP TABLE IF EXISTS `order subtotals`;
 /*!50001 DROP VIEW IF EXISTS `order subtotals`*/;
 SET @saved_cs_client     = @@character_set_client;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!50503 SET character_set_client = utf8 */;
 /*!50001 CREATE VIEW `order subtotals` AS SELECT 
  1 AS `OrderID`,
  1 AS `Subtotal`*/;
@@ -396,7 +396,7 @@ SET character_set_client = @saved_cs_client;
 
 DROP TABLE IF EXISTS `orders`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!50503 SET character_set_client = utf8 */;
 CREATE TABLE `orders` (
   `OrderID` int NOT NULL AUTO_INCREMENT,
   `CustomerID` varchar(5) DEFAULT NULL,
@@ -422,7 +422,7 @@ CREATE TABLE `orders` (
   CONSTRAINT `FK_Orders_Customers` FOREIGN KEY (`CustomerID`) REFERENCES `customers` (`CustomerID`),
   CONSTRAINT `FK_Orders_Employees` FOREIGN KEY (`EmployeeID`) REFERENCES `employees` (`EmployeeID`),
   CONSTRAINT `FK_Orders_Shippers` FOREIGN KEY (`ShipVia`) REFERENCES `shippers` (`ShipperID`)
-) ENGINE=InnoDB AUTO_INCREMENT=11078 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=11078 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -442,7 +442,7 @@ UNLOCK TABLES;
 DROP TABLE IF EXISTS `orders qry`;
 /*!50001 DROP VIEW IF EXISTS `orders qry`*/;
 SET @saved_cs_client     = @@character_set_client;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!50503 SET character_set_client = utf8 */;
 /*!50001 CREATE VIEW `orders qry` AS SELECT 
  1 AS `OrderID`,
  1 AS `CustomerID`,
@@ -473,7 +473,7 @@ SET character_set_client = @saved_cs_client;
 DROP TABLE IF EXISTS `product sales for 1997`;
 /*!50001 DROP VIEW IF EXISTS `product sales for 1997`*/;
 SET @saved_cs_client     = @@character_set_client;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!50503 SET character_set_client = utf8 */;
 /*!50001 CREATE VIEW `product sales for 1997` AS SELECT 
  1 AS `CategoryName`,
  1 AS `ProductName`,
@@ -486,7 +486,7 @@ SET character_set_client = @saved_cs_client;
 
 DROP TABLE IF EXISTS `products`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!50503 SET character_set_client = utf8 */;
 CREATE TABLE `products` (
   `ProductID` int NOT NULL AUTO_INCREMENT,
   `ProductName` varchar(40) NOT NULL,
@@ -504,7 +504,7 @@ CREATE TABLE `products` (
   KEY `FK_Products_Suppliers` (`SupplierID`),
   CONSTRAINT `FK_Products_Categories` FOREIGN KEY (`CategoryID`) REFERENCES `categories` (`CategoryID`),
   CONSTRAINT `FK_Products_Suppliers` FOREIGN KEY (`SupplierID`) REFERENCES `suppliers` (`SupplierID`)
-) ENGINE=InnoDB AUTO_INCREMENT=78 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=78 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -524,7 +524,7 @@ UNLOCK TABLES;
 DROP TABLE IF EXISTS `products above average price`;
 /*!50001 DROP VIEW IF EXISTS `products above average price`*/;
 SET @saved_cs_client     = @@character_set_client;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!50503 SET character_set_client = utf8 */;
 /*!50001 CREATE VIEW `products above average price` AS SELECT 
  1 AS `ProductName`,
  1 AS `UnitPrice`*/;
@@ -537,7 +537,7 @@ SET character_set_client = @saved_cs_client;
 DROP TABLE IF EXISTS `products by category`;
 /*!50001 DROP VIEW IF EXISTS `products by category`*/;
 SET @saved_cs_client     = @@character_set_client;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!50503 SET character_set_client = utf8 */;
 /*!50001 CREATE VIEW `products by category` AS SELECT 
  1 AS `CategoryName`,
  1 AS `ProductName`,
@@ -553,7 +553,7 @@ SET character_set_client = @saved_cs_client;
 DROP TABLE IF EXISTS `quarterly orders`;
 /*!50001 DROP VIEW IF EXISTS `quarterly orders`*/;
 SET @saved_cs_client     = @@character_set_client;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!50503 SET character_set_client = utf8 */;
 /*!50001 CREATE VIEW `quarterly orders` AS SELECT 
  1 AS `CustomerID`,
  1 AS `CompanyName`,
@@ -567,12 +567,12 @@ SET character_set_client = @saved_cs_client;
 
 DROP TABLE IF EXISTS `region`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!50503 SET character_set_client = utf8 */;
 CREATE TABLE `region` (
   `RegionID` int NOT NULL,
   `RegionDescription` varchar(50) NOT NULL,
   PRIMARY KEY (`RegionID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -592,7 +592,7 @@ UNLOCK TABLES;
 DROP TABLE IF EXISTS `sales by category`;
 /*!50001 DROP VIEW IF EXISTS `sales by category`*/;
 SET @saved_cs_client     = @@character_set_client;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!50503 SET character_set_client = utf8 */;
 /*!50001 CREATE VIEW `sales by category` AS SELECT 
  1 AS `CategoryID`,
  1 AS `CategoryName`,
@@ -607,7 +607,7 @@ SET character_set_client = @saved_cs_client;
 DROP TABLE IF EXISTS `sales totals by amount`;
 /*!50001 DROP VIEW IF EXISTS `sales totals by amount`*/;
 SET @saved_cs_client     = @@character_set_client;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!50503 SET character_set_client = utf8 */;
 /*!50001 CREATE VIEW `sales totals by amount` AS SELECT 
  1 AS `SaleAmount`,
  1 AS `OrderID`,
@@ -621,13 +621,13 @@ SET character_set_client = @saved_cs_client;
 
 DROP TABLE IF EXISTS `shippers`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!50503 SET character_set_client = utf8 */;
 CREATE TABLE `shippers` (
   `ShipperID` int NOT NULL AUTO_INCREMENT,
   `CompanyName` varchar(40) NOT NULL,
   `Phone` varchar(24) DEFAULT NULL,
   PRIMARY KEY (`ShipperID`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -647,7 +647,7 @@ UNLOCK TABLES;
 DROP TABLE IF EXISTS `summary of sales by quarter`;
 /*!50001 DROP VIEW IF EXISTS `summary of sales by quarter`*/;
 SET @saved_cs_client     = @@character_set_client;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!50503 SET character_set_client = utf8 */;
 /*!50001 CREATE VIEW `summary of sales by quarter` AS SELECT 
  1 AS `ShippedDate`,
  1 AS `OrderID`,
@@ -661,7 +661,7 @@ SET character_set_client = @saved_cs_client;
 DROP TABLE IF EXISTS `summary of sales by year`;
 /*!50001 DROP VIEW IF EXISTS `summary of sales by year`*/;
 SET @saved_cs_client     = @@character_set_client;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!50503 SET character_set_client = utf8 */;
 /*!50001 CREATE VIEW `summary of sales by year` AS SELECT 
  1 AS `ShippedDate`,
  1 AS `OrderID`,
@@ -674,7 +674,7 @@ SET character_set_client = @saved_cs_client;
 
 DROP TABLE IF EXISTS `suppliers`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!50503 SET character_set_client = utf8 */;
 CREATE TABLE `suppliers` (
   `SupplierID` int NOT NULL AUTO_INCREMENT,
   `CompanyName` varchar(40) NOT NULL,
@@ -691,7 +691,7 @@ CREATE TABLE `suppliers` (
   PRIMARY KEY (`SupplierID`),
   KEY `CompanyName` (`CompanyName`),
   KEY `PostalCode` (`PostalCode`)
-) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=30 DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -710,7 +710,7 @@ UNLOCK TABLES;
 
 DROP TABLE IF EXISTS `territories`;
 /*!40101 SET @saved_cs_client     = @@character_set_client */;
-/*!50503 SET character_set_client = utf8mb4 */;
+/*!50503 SET character_set_client = utf8 */;
 CREATE TABLE `territories` (
   `TerritoryID` varchar(20) NOT NULL,
   `TerritoryDescription` varchar(50) NOT NULL,
@@ -718,7 +718,7 @@ CREATE TABLE `territories` (
   PRIMARY KEY (`TerritoryID`),
   KEY `FK_Territories_Region` (`RegionID`),
   CONSTRAINT `FK_Territories_Region` FOREIGN KEY (`RegionID`) REFERENCES `region` (`RegionID`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -739,9 +739,9 @@ UNLOCK TABLES;
 /*!50001 SET @saved_cs_client          = @@character_set_client */;
 /*!50001 SET @saved_cs_results         = @@character_set_results */;
 /*!50001 SET @saved_col_connection     = @@collation_connection */;
-/*!50001 SET character_set_client      = utf8mb4 */;
-/*!50001 SET character_set_results     = utf8mb4 */;
-/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 SET character_set_client      = utf8 */;
+/*!50001 SET character_set_results     = utf8 */;
+/*!50001 SET collation_connection      = utf8_unicode_ci */;
 /*!50001 CREATE ALGORITHM=UNDEFINED */
 /*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
 /*!50001 VIEW `alphabetical list of products` AS select `products`.`ProductID` AS `ProductID`,`products`.`ProductName` AS `ProductName`,`products`.`SupplierID` AS `SupplierID`,`products`.`CategoryID` AS `CategoryID`,`products`.`QuantityPerUnit` AS `QuantityPerUnit`,`products`.`UnitPrice` AS `UnitPrice`,`products`.`UnitsInStock` AS `UnitsInStock`,`products`.`UnitsOnOrder` AS `UnitsOnOrder`,`products`.`ReorderLevel` AS `ReorderLevel`,`products`.`Discontinued` AS `Discontinued`,`categories`.`CategoryName` AS `CategoryName` from (`categories` join `products` on((`categories`.`CategoryID` = `products`.`CategoryID`))) where (`products`.`Discontinued` = 0) */;
@@ -757,9 +757,9 @@ UNLOCK TABLES;
 /*!50001 SET @saved_cs_client          = @@character_set_client */;
 /*!50001 SET @saved_cs_results         = @@character_set_results */;
 /*!50001 SET @saved_col_connection     = @@collation_connection */;
-/*!50001 SET character_set_client      = utf8mb4 */;
-/*!50001 SET character_set_results     = utf8mb4 */;
-/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 SET character_set_client      = utf8 */;
+/*!50001 SET character_set_results     = utf8 */;
+/*!50001 SET collation_connection      = utf8_unicode_ci */;
 /*!50001 CREATE ALGORITHM=UNDEFINED */
 /*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
 /*!50001 VIEW `category sales for 1997` AS select `product sales for 1997`.`CategoryName` AS `CategoryName`,sum(`product sales for 1997`.`ProductSales`) AS `CategorySales` from `product sales for 1997` group by `product sales for 1997`.`CategoryName` */;
@@ -775,9 +775,9 @@ UNLOCK TABLES;
 /*!50001 SET @saved_cs_client          = @@character_set_client */;
 /*!50001 SET @saved_cs_results         = @@character_set_results */;
 /*!50001 SET @saved_col_connection     = @@collation_connection */;
-/*!50001 SET character_set_client      = utf8mb4 */;
-/*!50001 SET character_set_results     = utf8mb4 */;
-/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 SET character_set_client      = utf8 */;
+/*!50001 SET character_set_results     = utf8 */;
+/*!50001 SET collation_connection      = utf8_unicode_ci */;
 /*!50001 CREATE ALGORITHM=UNDEFINED */
 /*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
 /*!50001 VIEW `current product list` AS select `products`.`ProductID` AS `ProductID`,`products`.`ProductName` AS `ProductName` from `products` where (`products`.`Discontinued` = 0) */;
@@ -793,9 +793,9 @@ UNLOCK TABLES;
 /*!50001 SET @saved_cs_client          = @@character_set_client */;
 /*!50001 SET @saved_cs_results         = @@character_set_results */;
 /*!50001 SET @saved_col_connection     = @@collation_connection */;
-/*!50001 SET character_set_client      = utf8mb4 */;
-/*!50001 SET character_set_results     = utf8mb4 */;
-/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 SET character_set_client      = utf8 */;
+/*!50001 SET character_set_results     = utf8 */;
+/*!50001 SET collation_connection      = utf8_unicode_ci */;
 /*!50001 CREATE ALGORITHM=UNDEFINED */
 /*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
 /*!50001 VIEW `customer and suppliers by city` AS select `customers`.`City` AS `City`,`customers`.`CompanyName` AS `CompanyName`,`customers`.`ContactName` AS `ContactName`,'Customers' AS `Relationship` from `customers` union select `suppliers`.`City` AS `City`,`suppliers`.`CompanyName` AS `CompanyName`,`suppliers`.`ContactName` AS `ContactName`,'Suppliers' AS `Suppliers` from `suppliers` order by `City`,`CompanyName` */;
@@ -811,9 +811,9 @@ UNLOCK TABLES;
 /*!50001 SET @saved_cs_client          = @@character_set_client */;
 /*!50001 SET @saved_cs_results         = @@character_set_results */;
 /*!50001 SET @saved_col_connection     = @@collation_connection */;
-/*!50001 SET character_set_client      = utf8mb4 */;
-/*!50001 SET character_set_results     = utf8mb4 */;
-/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 SET character_set_client      = utf8 */;
+/*!50001 SET character_set_results     = utf8 */;
+/*!50001 SET collation_connection      = utf8_unicode_ci */;
 /*!50001 CREATE ALGORITHM=UNDEFINED */
 /*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
 /*!50001 VIEW `invoices` AS select `orders`.`ShipName` AS `ShipName`,`orders`.`ShipAddress` AS `ShipAddress`,`orders`.`ShipCity` AS `ShipCity`,`orders`.`ShipRegion` AS `ShipRegion`,`orders`.`ShipPostalCode` AS `ShipPostalCode`,`orders`.`ShipCountry` AS `ShipCountry`,`orders`.`CustomerID` AS `CustomerID`,`customers`.`CompanyName` AS `CustomerName`,`customers`.`Address` AS `Address`,`customers`.`City` AS `City`,`customers`.`Region` AS `Region`,`customers`.`PostalCode` AS `PostalCode`,`customers`.`Country` AS `Country`,((`employees`.`FirstName` + ' ') + `employees`.`LastName`) AS `Salesperson`,`orders`.`OrderID` AS `OrderID`,`orders`.`OrderDate` AS `OrderDate`,`orders`.`RequiredDate` AS `RequiredDate`,`orders`.`ShippedDate` AS `ShippedDate`,`shippers`.`CompanyName` AS `ShipperName`,`order details`.`ProductID` AS `ProductID`,`products`.`ProductName` AS `ProductName`,`order details`.`UnitPrice` AS `UnitPrice`,`order details`.`Quantity` AS `Quantity`,`order details`.`Discount` AS `Discount`,((((`order details`.`UnitPrice` * `order details`.`Quantity`) * (1 - `order details`.`Discount`)) / 100) * 100) AS `ExtendedPrice`,`orders`.`Freight` AS `Freight` from (((((`customers` join `orders` on((`customers`.`CustomerID` = `orders`.`CustomerID`))) join `employees` on((`employees`.`EmployeeID` = `orders`.`EmployeeID`))) join `order details` on((`orders`.`OrderID` = `order details`.`OrderID`))) join `products` on((`products`.`ProductID` = `order details`.`ProductID`))) join `shippers` on((`shippers`.`ShipperID` = `orders`.`ShipVia`))) */;
@@ -829,9 +829,9 @@ UNLOCK TABLES;
 /*!50001 SET @saved_cs_client          = @@character_set_client */;
 /*!50001 SET @saved_cs_results         = @@character_set_results */;
 /*!50001 SET @saved_col_connection     = @@collation_connection */;
-/*!50001 SET character_set_client      = utf8mb4 */;
-/*!50001 SET character_set_results     = utf8mb4 */;
-/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 SET character_set_client      = utf8 */;
+/*!50001 SET character_set_results     = utf8 */;
+/*!50001 SET collation_connection      = utf8_unicode_ci */;
 /*!50001 CREATE ALGORITHM=UNDEFINED */
 /*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
 /*!50001 VIEW `order details extended` AS select `order details`.`OrderID` AS `OrderID`,`order details`.`ProductID` AS `ProductID`,`products`.`ProductName` AS `ProductName`,`order details`.`UnitPrice` AS `UnitPrice`,`order details`.`Quantity` AS `Quantity`,`order details`.`Discount` AS `Discount`,((((`order details`.`UnitPrice` * `order details`.`Quantity`) * (1 - `order details`.`Discount`)) / 100) * 100) AS `ExtendedPrice` from (`products` join `order details` on((`products`.`ProductID` = `order details`.`ProductID`))) */;
@@ -847,9 +847,9 @@ UNLOCK TABLES;
 /*!50001 SET @saved_cs_client          = @@character_set_client */;
 /*!50001 SET @saved_cs_results         = @@character_set_results */;
 /*!50001 SET @saved_col_connection     = @@collation_connection */;
-/*!50001 SET character_set_client      = utf8mb4 */;
-/*!50001 SET character_set_results     = utf8mb4 */;
-/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 SET character_set_client      = utf8 */;
+/*!50001 SET character_set_results     = utf8 */;
+/*!50001 SET collation_connection      = utf8_unicode_ci */;
 /*!50001 CREATE ALGORITHM=UNDEFINED */
 /*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
 /*!50001 VIEW `order subtotals` AS select `order details`.`OrderID` AS `OrderID`,sum(((((`order details`.`UnitPrice` * `order details`.`Quantity`) * (1 - `order details`.`Discount`)) / 100) * 100)) AS `Subtotal` from `order details` group by `order details`.`OrderID` */;
@@ -865,9 +865,9 @@ UNLOCK TABLES;
 /*!50001 SET @saved_cs_client          = @@character_set_client */;
 /*!50001 SET @saved_cs_results         = @@character_set_results */;
 /*!50001 SET @saved_col_connection     = @@collation_connection */;
-/*!50001 SET character_set_client      = utf8mb4 */;
-/*!50001 SET character_set_results     = utf8mb4 */;
-/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 SET character_set_client      = utf8 */;
+/*!50001 SET character_set_results     = utf8 */;
+/*!50001 SET collation_connection      = utf8_unicode_ci */;
 /*!50001 CREATE ALGORITHM=UNDEFINED */
 /*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
 /*!50001 VIEW `orders qry` AS select `orders`.`OrderID` AS `OrderID`,`orders`.`CustomerID` AS `CustomerID`,`orders`.`EmployeeID` AS `EmployeeID`,`orders`.`OrderDate` AS `OrderDate`,`orders`.`RequiredDate` AS `RequiredDate`,`orders`.`ShippedDate` AS `ShippedDate`,`orders`.`ShipVia` AS `ShipVia`,`orders`.`Freight` AS `Freight`,`orders`.`ShipName` AS `ShipName`,`orders`.`ShipAddress` AS `ShipAddress`,`orders`.`ShipCity` AS `ShipCity`,`orders`.`ShipRegion` AS `ShipRegion`,`orders`.`ShipPostalCode` AS `ShipPostalCode`,`orders`.`ShipCountry` AS `ShipCountry`,`customers`.`CompanyName` AS `CompanyName`,`customers`.`Address` AS `Address`,`customers`.`City` AS `City`,`customers`.`Region` AS `Region`,`customers`.`PostalCode` AS `PostalCode`,`customers`.`Country` AS `Country` from (`customers` join `orders` on((`customers`.`CustomerID` = `orders`.`CustomerID`))) */;
@@ -883,9 +883,9 @@ UNLOCK TABLES;
 /*!50001 SET @saved_cs_client          = @@character_set_client */;
 /*!50001 SET @saved_cs_results         = @@character_set_results */;
 /*!50001 SET @saved_col_connection     = @@collation_connection */;
-/*!50001 SET character_set_client      = utf8mb4 */;
-/*!50001 SET character_set_results     = utf8mb4 */;
-/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 SET character_set_client      = utf8 */;
+/*!50001 SET character_set_results     = utf8 */;
+/*!50001 SET collation_connection      = utf8_unicode_ci */;
 /*!50001 CREATE ALGORITHM=UNDEFINED */
 /*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
 /*!50001 VIEW `product sales for 1997` AS select `categories`.`CategoryName` AS `CategoryName`,`products`.`ProductName` AS `ProductName`,sum(((((`order details`.`UnitPrice` * `order details`.`Quantity`) * (1 - `order details`.`Discount`)) / 100) * 100)) AS `ProductSales` from (((`categories` join `products` on((`categories`.`CategoryID` = `products`.`CategoryID`))) join `order details` on((`products`.`ProductID` = `order details`.`ProductID`))) join `orders` on((`orders`.`OrderID` = `order details`.`OrderID`))) where (`orders`.`ShippedDate` between '1997-01-01' and '1997-12-31') group by `categories`.`CategoryName`,`products`.`ProductName` */;
@@ -901,9 +901,9 @@ UNLOCK TABLES;
 /*!50001 SET @saved_cs_client          = @@character_set_client */;
 /*!50001 SET @saved_cs_results         = @@character_set_results */;
 /*!50001 SET @saved_col_connection     = @@collation_connection */;
-/*!50001 SET character_set_client      = utf8mb4 */;
-/*!50001 SET character_set_results     = utf8mb4 */;
-/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 SET character_set_client      = utf8 */;
+/*!50001 SET character_set_results     = utf8 */;
+/*!50001 SET collation_connection      = utf8_unicode_ci */;
 /*!50001 CREATE ALGORITHM=UNDEFINED */
 /*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
 /*!50001 VIEW `products above average price` AS select `products`.`ProductName` AS `ProductName`,`products`.`UnitPrice` AS `UnitPrice` from `products` where (`products`.`UnitPrice` > (select avg(`products`.`UnitPrice`) from `products`)) */;
@@ -919,9 +919,9 @@ UNLOCK TABLES;
 /*!50001 SET @saved_cs_client          = @@character_set_client */;
 /*!50001 SET @saved_cs_results         = @@character_set_results */;
 /*!50001 SET @saved_col_connection     = @@collation_connection */;
-/*!50001 SET character_set_client      = utf8mb4 */;
-/*!50001 SET character_set_results     = utf8mb4 */;
-/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 SET character_set_client      = utf8 */;
+/*!50001 SET character_set_results     = utf8 */;
+/*!50001 SET collation_connection      = utf8_unicode_ci */;
 /*!50001 CREATE ALGORITHM=UNDEFINED */
 /*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
 /*!50001 VIEW `products by category` AS select `categories`.`CategoryName` AS `CategoryName`,`products`.`ProductName` AS `ProductName`,`products`.`QuantityPerUnit` AS `QuantityPerUnit`,`products`.`UnitsInStock` AS `UnitsInStock`,`products`.`Discontinued` AS `Discontinued` from (`categories` join `products` on((`categories`.`CategoryID` = `products`.`CategoryID`))) where (`products`.`Discontinued` <> 1) */;
@@ -937,9 +937,9 @@ UNLOCK TABLES;
 /*!50001 SET @saved_cs_client          = @@character_set_client */;
 /*!50001 SET @saved_cs_results         = @@character_set_results */;
 /*!50001 SET @saved_col_connection     = @@collation_connection */;
-/*!50001 SET character_set_client      = utf8mb4 */;
-/*!50001 SET character_set_results     = utf8mb4 */;
-/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 SET character_set_client      = utf8 */;
+/*!50001 SET character_set_results     = utf8 */;
+/*!50001 SET collation_connection      = utf8_unicode_ci */;
 /*!50001 CREATE ALGORITHM=UNDEFINED */
 /*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
 /*!50001 VIEW `quarterly orders` AS select distinct `customers`.`CustomerID` AS `CustomerID`,`customers`.`CompanyName` AS `CompanyName`,`customers`.`City` AS `City`,`customers`.`Country` AS `Country` from (`customers` join `orders` on((`customers`.`CustomerID` = `orders`.`CustomerID`))) where (`orders`.`OrderDate` between '1997-01-01' and '1997-12-31') */;
@@ -955,9 +955,9 @@ UNLOCK TABLES;
 /*!50001 SET @saved_cs_client          = @@character_set_client */;
 /*!50001 SET @saved_cs_results         = @@character_set_results */;
 /*!50001 SET @saved_col_connection     = @@collation_connection */;
-/*!50001 SET character_set_client      = utf8mb4 */;
-/*!50001 SET character_set_results     = utf8mb4 */;
-/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 SET character_set_client      = utf8 */;
+/*!50001 SET character_set_results     = utf8 */;
+/*!50001 SET collation_connection      = utf8_unicode_ci */;
 /*!50001 CREATE ALGORITHM=UNDEFINED */
 /*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
 /*!50001 VIEW `sales by category` AS select `categories`.`CategoryID` AS `CategoryID`,`categories`.`CategoryName` AS `CategoryName`,`products`.`ProductName` AS `ProductName`,sum(`order details extended`.`ExtendedPrice`) AS `ProductSales` from (((`categories` join `products` on((`categories`.`CategoryID` = `products`.`CategoryID`))) join `order details extended` on((`products`.`ProductID` = `order details extended`.`ProductID`))) join `orders` on((`orders`.`OrderID` = `order details extended`.`OrderID`))) where (`orders`.`OrderDate` between '1997-01-01' and '1997-12-31') group by `categories`.`CategoryID`,`categories`.`CategoryName`,`products`.`ProductName` */;
@@ -973,9 +973,9 @@ UNLOCK TABLES;
 /*!50001 SET @saved_cs_client          = @@character_set_client */;
 /*!50001 SET @saved_cs_results         = @@character_set_results */;
 /*!50001 SET @saved_col_connection     = @@collation_connection */;
-/*!50001 SET character_set_client      = utf8mb4 */;
-/*!50001 SET character_set_results     = utf8mb4 */;
-/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 SET character_set_client      = utf8 */;
+/*!50001 SET character_set_results     = utf8 */;
+/*!50001 SET collation_connection      = utf8_unicode_ci */;
 /*!50001 CREATE ALGORITHM=UNDEFINED */
 /*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
 /*!50001 VIEW `sales totals by amount` AS select `order subtotals`.`Subtotal` AS `SaleAmount`,`orders`.`OrderID` AS `OrderID`,`customers`.`CompanyName` AS `CompanyName`,`orders`.`ShippedDate` AS `ShippedDate` from ((`customers` join `orders` on((`customers`.`CustomerID` = `orders`.`CustomerID`))) join `order subtotals` on((`orders`.`OrderID` = `order subtotals`.`OrderID`))) where ((`order subtotals`.`Subtotal` > 2500) and (`orders`.`ShippedDate` between '1997-01-01' and '1997-12-31')) */;
@@ -991,9 +991,9 @@ UNLOCK TABLES;
 /*!50001 SET @saved_cs_client          = @@character_set_client */;
 /*!50001 SET @saved_cs_results         = @@character_set_results */;
 /*!50001 SET @saved_col_connection     = @@collation_connection */;
-/*!50001 SET character_set_client      = utf8mb4 */;
-/*!50001 SET character_set_results     = utf8mb4 */;
-/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 SET character_set_client      = utf8 */;
+/*!50001 SET character_set_results     = utf8 */;
+/*!50001 SET collation_connection      = utf8_unicode_ci */;
 /*!50001 CREATE ALGORITHM=UNDEFINED */
 /*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
 /*!50001 VIEW `summary of sales by quarter` AS select `orders`.`ShippedDate` AS `ShippedDate`,`orders`.`OrderID` AS `OrderID`,`order subtotals`.`Subtotal` AS `Subtotal` from (`orders` join `order subtotals` on((`orders`.`OrderID` = `order subtotals`.`OrderID`))) where (`orders`.`ShippedDate` is not null) */;
@@ -1009,9 +1009,9 @@ UNLOCK TABLES;
 /*!50001 SET @saved_cs_client          = @@character_set_client */;
 /*!50001 SET @saved_cs_results         = @@character_set_results */;
 /*!50001 SET @saved_col_connection     = @@collation_connection */;
-/*!50001 SET character_set_client      = utf8mb4 */;
-/*!50001 SET character_set_results     = utf8mb4 */;
-/*!50001 SET collation_connection      = utf8mb4_0900_ai_ci */;
+/*!50001 SET character_set_client      = utf8 */;
+/*!50001 SET character_set_results     = utf8 */;
+/*!50001 SET collation_connection      = utf8_unicode_ci */;
 /*!50001 CREATE ALGORITHM=UNDEFINED */
 /*!50013 DEFINER=`root`@`localhost` SQL SECURITY DEFINER */
 /*!50001 VIEW `summary of sales by year` AS select `orders`.`ShippedDate` AS `ShippedDate`,`orders`.`OrderID` AS `OrderID`,`order subtotals`.`Subtotal` AS `Subtotal` from (`orders` join `order subtotals` on((`orders`.`OrderID` = `order subtotals`.`OrderID`))) where (`orders`.`ShippedDate` is not null) */;
