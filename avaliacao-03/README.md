@@ -4,6 +4,8 @@
 
 A conexão do banco é realizada pelo `services/database.js` utilizando parametrizações vindas de um arquivo `.env`. É possível criar baseado no `.env.example`.
 
+O script de criação do banco se encontra aqui: [escola.sql](https://raw.githubusercontent.com/AlexandreNS/uemg-desenvolvimento-web/main/databases/escola.sql)
+
 A partir de informações das tabelas de `alunos` e `turmas` localizadas na pasta de `schemas` é registrado pela função `routerModelBuilder(schema, limitDefault = 20, middlewares = {})`, incluída no arquivo `helpers/route.js`, operações de CRUD de acordo com as validações e informações passados no schema. As validações dos schemas foram realizadas utilizando o pacote [Joi](https://www.npmjs.com/package/joi).
 
 Para impedir a criação ou atualização de alunos em turmas não existentes foi criado o `existTurmaID` para as rotas de insert e update do builder das rotas alunos.
